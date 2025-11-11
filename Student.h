@@ -1,10 +1,10 @@
+//#write student class here
 #ifndef STUDENT_H
 #define STUDENT_H
 
 #include "Person.h"
 #include <string>
-#using namespace std;
-//#write student class here
+using namespace std;
 
 class Student : public Person {
 private:
@@ -12,39 +12,15 @@ private:
     string major;
 
 public:
-    Student() : Person(), year(0), major("") {}
-    Student(string n, int i, int y, string m) : Person(n, i), year(y), major(m) {}
+    Student();
+    Student(string n, int i, int y, string m);
 
-    int getYear()  { 
-      return year; 
-    }
-    string getMajor(){ 
-      return major; 
-    }
+    int getYear();
+    string getMajor();
 
-    void setYear(int y) { 
-      year = y; 
-    }
-    void setMajor(string& m) {
-      major = m;
-    }
+    void setYear(int y);
+    void setMajor(string& m);
 
-    void display()override {
-        cout << "Name: " << getName() << endl;
-        cout << "Year: " << year << endl;
-        cout << "Major: " << major << endl;
-    }
+    void display() override;
 };
-
-
-
-
-
-
-
-
-
-
-
-
 #endif
