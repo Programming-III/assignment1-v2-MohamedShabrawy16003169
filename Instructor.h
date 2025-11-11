@@ -10,28 +10,15 @@ private:
     int experienceYears;
 
 public:
-    Instructor() : Person(), department(""), experienceYears(0) {}
-    Instructor(string n, int i, string d, int e)
-        : Person(n, i), department(d), experienceYears(e) {}
+    Instructor();
+    Instructor(string n, int i, string d, int e);
 
-    string getDepartment() { 
-      return department; 
-    }
-    int getExperienceYears() { 
-      return experienceYears;
-    }
+    string getDepartment();
+    int getExperienceYears();
 
-    void setDepartment( string& d) { 
-      department = d; 
-    }
-    void setExperienceYears(int e) { 
-      experienceYears = e;
-    }
+    void setDepartment(string& d);
+    void setExperienceYears(int e);
 
-    void display()  override {
-        cout << "Name: " << getName() << endl;
-        cout << "Department: " << department << endl;
-        cout << "Experience: " << experienceYears << endl;
-    }
+    void display() override;
 };
 #endif
